@@ -12,7 +12,9 @@ const basePath = path.join(
 
 const options: BetterSqlite3ConnectionOptions = {
   type: "better-sqlite3",
-  entities: [User],
+  entities: [
+    "src/dal/entities/*.ts"
+  ],
   database: basePath,
   synchronize: true,
 }
